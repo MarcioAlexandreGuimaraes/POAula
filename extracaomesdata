@@ -1,0 +1,13 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite uma data (dd/mm/aaaa): ");
+        DateTime data = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+        
+        string mes = data.ToString("MMMM").ToUpper();
+        Console.WriteLine("MÊS: " + mes);
+    }
+}
