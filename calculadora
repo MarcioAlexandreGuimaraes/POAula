@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite a primeira data (dd/mm/aaaa): ");
+        DateTime data1 = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+        Console.Write("Digite a segunda data (dd/mm/aaaa): ");
+        DateTime data2 = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+        TimeSpan diferenca = data2 - data1;
+        Console.WriteLine("Número de dias entre as datas: " + Math.Abs(diferenca.Days));
+    }
+}
