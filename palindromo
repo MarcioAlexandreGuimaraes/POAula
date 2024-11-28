@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite uma string: ");
+        string input = Console.ReadLine();
+        
+        string inputLimpo = input.Replace(" ", "").ToLower();
+        string reversed = new string(inputLimpo.Reverse().ToArray());
+
+        if (inputLimpo.Equals(reversed))
+        {
+            Console.WriteLine("A string é um palíndromo.");
+        }
+        else
+        {
+            Console.WriteLine("A string não é um palíndromo.");
+        }
+    }
+}
